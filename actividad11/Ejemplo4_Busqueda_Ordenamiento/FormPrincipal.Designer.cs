@@ -167,7 +167,7 @@
             Controls.Add(lbResultado);
             Controls.Add(tbResultado);
             Name = "FormPrincipal";
-            Text = "Form1";
+            Text = "Ejemplo4 - Busqueda y Ordenamiento";
             ResumeLayout(false);
             PerformLayout();
         }

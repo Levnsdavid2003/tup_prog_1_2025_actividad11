@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo3_Con_Vectores", "Ej
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo4_Busqueda_Ordenamiento", "Ejemplo4_Busqueda_Ordenamiento\Ejemplo4_Busqueda_Ordenamiento.csproj", "{794EF8E2-558F-42E9-86CB-E7E93E536A3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo5_MayoresPromedio_MaximoYMinimo", "Ejemplo5_MayoresPromedio_MaximoYMinimo\Ejemplo5_MayoresPromedio_MaximoYMinimo.csproj", "{BDD659FE-341B-48ED-826D-144B76E2B7FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ejemplo6_Todo_Clase_Servicio", "Ejemplo6_Todo_Clase_Servicio\Ejemplo6_Todo_Clase_Servicio.csproj", "{A63ACAEB-D7FA-41F0-AE74-909D9AC10C81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{794EF8E2-558F-42E9-86CB-E7E93E536A3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{794EF8E2-558F-42E9-86CB-E7E93E536A3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{794EF8E2-558F-42E9-86CB-E7E93E536A3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD659FE-341B-48ED-826D-144B76E2B7FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD659FE-341B-48ED-826D-144B76E2B7FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD659FE-341B-48ED-826D-144B76E2B7FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD659FE-341B-48ED-826D-144B76E2B7FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A63ACAEB-D7FA-41F0-AE74-909D9AC10C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A63ACAEB-D7FA-41F0-AE74-909D9AC10C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A63ACAEB-D7FA-41F0-AE74-909D9AC10C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A63ACAEB-D7FA-41F0-AE74-909D9AC10C81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

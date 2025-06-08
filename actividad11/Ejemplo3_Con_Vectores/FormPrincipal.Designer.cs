@@ -119,7 +119,7 @@
             Controls.Add(lbResultado);
             Controls.Add(tbResultado);
             Name = "FormPrincipal";
-            Text = "Form1";
+            Text = "Ejemplo3 - Con Vectores";
             ResumeLayout(false);
             PerformLayout();
         }
