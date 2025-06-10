@@ -98,25 +98,66 @@ namespace Ejemplo5_MayoresPromedio_MaximoYMinimo
                 tbResultado.Text = $"El numero {numBuscar} no se ha encontrado.";
             }
         }
-        private void btnListarOrdenado_Click(object sender, EventArgs e)
-        {
-            for (int n = 0; n < contador - 1; n++)
-            {
-                for (int m = n + 1; m < contador; m++)
-                {
-                    if (valores[n] > valores[m])
-                    {
-                        double aux = valores[n];
-                        valores[n] = valores[m];
-                        valores[m] = aux;
-                    }
 
+        void Intercambiar(double[] vector, int pivote, int consecutivo)
+        {
+            double auxiliar = vector[pivote];
+            vector[pivote] = vector[consecutivo];
+            vector[consecutivo] = auxiliar;
+        }
+        void ReordenarNums()
+        {
+            for (int pivote = 0; pivote < contador - 1; pivote++)
+            {
+                for (int consecutivo = pivote + 1; consecutivo < contador; consecutivo++)
+                {
+                    if (valores[pivote] > valores[consecutivo])
+                    {
+                        Intercambiar(valores, pivote, consecutivo);
+                    }
                 }
             }
+        }
+
+        private void btnListarOrdenado_Click(object sender, EventArgs e)
+        {
+            ReordenarNums();
+
             tbResultado.Text = "Los numeros ordenados son: ";
             for (int i = 0; i < contador; i++)
             {
                 tbResultado.Text += $"{valores[i]} ";
+            }
+        }
+
+        private void btnMayoresAlPromedio_Click(object sender, EventArgs e)
+        {
+            ReordenarNums();
+
+            double acumulador = 0;
+            double promedio = 0;
+            for (int i = 0; i < contador; i++)
+            {
+                acumulador += valores[i];
+            }
+
+            if (contador > 0)
+            {
+                promedio = acumulador / contador;
+
+                tbResultado.Text = "Los números mayores al promedio son: \n";
+
+                for (int n = 0; n < contador; n++)
+                {
+                    if (valores[n] > promedio)
+                    {
+                        tbResultado.Text += $"{valores[n],5:f2}, ";
+                    }
+                }
+            }
+            else
+            {
+                tbResultado.Text = "No se han cargado numeros";
             }
         }
     }

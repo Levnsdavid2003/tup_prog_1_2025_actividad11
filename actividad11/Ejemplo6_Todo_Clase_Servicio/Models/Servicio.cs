@@ -8,8 +8,8 @@ namespace Ejemplo6_Todo_Clase_Servicio.Models
 {
     internal class Servicio
     {
-        int contador = 0;
-        double[] valores = new double[100];
+        public int contador = 0;
+        public double[] valores = new double[100];
 
 
         public void RegistrarValor(double valor)
@@ -72,13 +72,44 @@ namespace Ejemplo6_Todo_Clase_Servicio.Models
             }
             return indice;
         }
-
-        void ReordenarNumeros(double[] vector, int pivote, int consecutivo)
+        void Intercambiar(double[] vector, int pivote, int consecutivo)
         {
             double auxiliar = vector[pivote];
             vector[pivote] = vector[consecutivo];
             vector[consecutivo] = auxiliar;
         }
+        public void ReordenarNums()
+        {
+            for (int pivote = 0; pivote < contador - 1; pivote++)
+            {
+                for (int consecutivo = pivote + 1; consecutivo < contador; consecutivo++)
+                {
+                    if (valores[pivote] > valores[consecutivo])
+                    {
+                        Intercambiar(valores, pivote, consecutivo);
+                    }
+                }
+            }
+        }
 
+
+        public int[] CalcularMayoresAlPromedio(out int cantidadMayores)
+        {
+            int[] indiceMayores = new int[contador];
+            ReordenarNums();
+
+            double promedio = CalcularPromedio();
+            cantidadMayores = 0;
+
+            for (int n = 0; n < contador; n++)
+            {
+                if (valores[n] > promedio)
+                {
+                    indiceMayores[cantidadMayores] = n;
+                    cantidadMayores++;
+                }
+            }
+            return indiceMayores;
+        }
     }
 }

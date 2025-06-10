@@ -37,7 +37,6 @@
             lbBuscar = new Label();
             btnBuscar = new Button();
             tbBuscar = new TextBox();
-            btnListarOrdenado = new Button();
             tbValor = new TextBox();
             btnCalcularPromedio = new Button();
             btnRegistrar = new Button();
@@ -45,6 +44,8 @@
             lbPromedio = new Label();
             lbResultado = new Label();
             tbResultado = new TextBox();
+            btnMayoresAlPromedio = new Button();
+            btnListarOrdenado = new Button();
             SuspendLayout();
             // 
             // btnMinimo
@@ -138,16 +139,6 @@
             tbBuscar.Size = new Size(136, 25);
             tbBuscar.TabIndex = 48;
             // 
-            // btnListarOrdenado
-            // 
-            btnListarOrdenado.Font = new Font("Segoe UI", 10F);
-            btnListarOrdenado.Location = new Point(298, 382);
-            btnListarOrdenado.Name = "btnListarOrdenado";
-            btnListarOrdenado.Size = new Size(89, 54);
-            btnListarOrdenado.TabIndex = 47;
-            btnListarOrdenado.Text = "Listar Ordenado";
-            btnListarOrdenado.UseVisualStyleBackColor = true;
-            // 
             // tbValor
             // 
             tbValor.Font = new Font("Segoe UI", 10F);
@@ -214,14 +205,38 @@
             tbResultado.Location = new Point(19, 359);
             tbResultado.Multiline = true;
             tbResultado.Name = "tbResultado";
-            tbResultado.Size = new Size(262, 97);
+            tbResultado.Size = new Size(262, 131);
             tbResultado.TabIndex = 46;
+            // 
+            // btnMayoresAlPromedio
+            // 
+            btnMayoresAlPromedio.Font = new Font("Segoe UI", 10F);
+            btnMayoresAlPromedio.Location = new Point(296, 413);
+            btnMayoresAlPromedio.Name = "btnMayoresAlPromedio";
+            btnMayoresAlPromedio.Size = new Size(89, 77);
+            btnMayoresAlPromedio.TabIndex = 58;
+            btnMayoresAlPromedio.Text = "Listado Superior al Promedio";
+            btnMayoresAlPromedio.UseVisualStyleBackColor = true;
+            btnMayoresAlPromedio.Click += btnMayoresAlPromedio_Click;
+            // 
+            // btnListarOrdenado
+            // 
+            btnListarOrdenado.Font = new Font("Segoe UI", 10F);
+            btnListarOrdenado.Location = new Point(296, 359);
+            btnListarOrdenado.Name = "btnListarOrdenado";
+            btnListarOrdenado.Size = new Size(89, 48);
+            btnListarOrdenado.TabIndex = 57;
+            btnListarOrdenado.Text = "Listar Ordenado";
+            btnListarOrdenado.UseVisualStyleBackColor = true;
+            btnListarOrdenado.Click += btnListarOrdenado_Click;
             // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(397, 469);
+            ClientSize = new Size(397, 498);
+            Controls.Add(btnMayoresAlPromedio);
+            Controls.Add(btnListarOrdenado);
             Controls.Add(btnMinimo);
             Controls.Add(lbMinimoResultado);
             Controls.Add(lbMinimo);
@@ -231,7 +246,6 @@
             Controls.Add(lbBuscar);
             Controls.Add(btnBuscar);
             Controls.Add(tbBuscar);
-            Controls.Add(btnListarOrdenado);
             Controls.Add(tbValor);
             Controls.Add(btnCalcularPromedio);
             Controls.Add(btnRegistrar);
@@ -256,7 +270,6 @@
         private Label lbBuscar;
         private Button btnBuscar;
         private TextBox tbBuscar;
-        private Button btnListarOrdenado;
         private TextBox tbValor;
         private Button btnCalcularPromedio;
         private Button btnRegistrar;
@@ -264,5 +277,7 @@
         private Label lbPromedio;
         private Label lbResultado;
         private TextBox tbResultado;
+        private Button btnMayoresAlPromedio;
+        private Button btnListarOrdenado;
     }
 }

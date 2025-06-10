@@ -45,7 +45,7 @@
             btnMinimo = new Button();
             lbMinimoResultado = new Label();
             lbMinimo = new Label();
-            button1 = new Button();
+            btnMayoresAlPromedio = new Button();
             SuspendLayout();
             // 
             // lbBuscar
@@ -219,22 +219,23 @@
             lbMinimo.TabIndex = 38;
             lbMinimo.Text = "Mínimo número";
             // 
-            // button1
+            // btnMayoresAlPromedio
             // 
-            button1.Font = new Font("Segoe UI", 10F);
-            button1.Location = new Point(311, 416);
-            button1.Name = "button1";
-            button1.Size = new Size(89, 77);
-            button1.TabIndex = 40;
-            button1.Text = "Listado Superior al Promedio";
-            button1.UseVisualStyleBackColor = true;
+            btnMayoresAlPromedio.Font = new Font("Segoe UI", 10F);
+            btnMayoresAlPromedio.Location = new Point(311, 416);
+            btnMayoresAlPromedio.Name = "btnMayoresAlPromedio";
+            btnMayoresAlPromedio.Size = new Size(89, 77);
+            btnMayoresAlPromedio.TabIndex = 41;
+            btnMayoresAlPromedio.Text = "Listado Superior al Promedio";
+            btnMayoresAlPromedio.UseVisualStyleBackColor = true;
+            btnMayoresAlPromedio.Click += btnMayoresAlPromedio_Click;
             // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(421, 505);
-            Controls.Add(button1);
+            Controls.Add(btnMayoresAlPromedio);
             Controls.Add(btnMinimo);
             Controls.Add(lbMinimoResultado);
             Controls.Add(lbMinimo);
@@ -277,6 +278,6 @@
         private Button btnMinimo;
         private Label lbMinimoResultado;
         private Label lbMinimo;
-        private Button button1;
+        private Button btnMayoresAlPromedio;
     }
 }

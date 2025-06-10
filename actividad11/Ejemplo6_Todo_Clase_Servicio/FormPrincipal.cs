@@ -57,7 +57,30 @@ namespace Ejemplo6_Todo_Clase_Servicio
             }
         }
 
+        private void btnListarOrdenado_Click(object sender, EventArgs e)
+        {
+            servicio.ReordenarNums();
 
+            tbResultado.Text = "Los numeros ordenados son: ";
+            for (int i = 0; i < servicio.contador; i++)
+            {
+                tbResultado.Text += $"{servicio.valores[i]} ";
+            }
+        }
 
+        private void btnMayoresAlPromedio_Click(object sender, EventArgs e)
+        {
+            int cantidadMayores = 0;
+            int[] indiceMayores = servicio.CalcularMayoresAlPromedio(out cantidadMayores);
+
+            tbResultado.Text = "Los números mayores al promedio son: \n";
+
+            for (int n = 0; n < cantidadMayores; n++)
+            {
+                int indice = indiceMayores[n];
+                tbResultado.Text += $"{servicio.valores[indice],5:f2}, ";
+            }
+
+        }
     }
 }
